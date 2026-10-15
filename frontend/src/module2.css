@@ -1,0 +1,20 @@
+.form-page,.content-page { padding: 28px 0 54px; }
+.form-card { max-width: 850px; margin: 0 auto; padding: 28px; border: 1px solid var(--border, #e5e7eb); border-radius: 18px; background: var(--card, #fff); }
+.form-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; margin-top:22px; }
+.form-grid label,.filter-panel label { display:flex; flex-direction:column; gap:7px; font-size:.92rem; font-weight:600; }
+.form-grid input,.form-grid textarea,.form-grid select,.filter-panel input { width:100%; padding:11px 12px; border:1px solid #d1d5db; border-radius:9px; font:inherit; }
+.full-width { grid-column:1/-1; }
+.booking-list { display:grid; gap:16px; margin-top:22px; }
+.booking-card { border:1px solid #e5e7eb; border-radius:15px; padding:20px; background:#fff; }
+.booking-card h2 { margin:6px 0; font-size:1.2rem; }
+.booking-card-top { display:flex; justify-content:space-between; align-items:flex-start; gap:14px; }
+.button-row { display:flex; flex-wrap:wrap; gap:10px; margin-top:15px; }
+.button-danger { background:#b42318; color:#fff; border:1px solid #b42318; }
+.status-pill { display:inline-block; border-radius:999px; padding:5px 10px; font-size:.8rem; font-weight:700; text-transform:capitalize; background:#eef2ff; color:#3730a3; }
+.status-completed { background:#dcfce7; color:#166534; }.status-cancelled,.status-rejected { background:#fee2e2; color:#991b1b; }
+.status-accepted,.status-in_service { background:#dbeafe; color:#1d4ed8; }
+.filter-panel { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:14px; padding:18px; margin:20px 0; border:1px solid #e5e7eb; border-radius:14px; }
+.match-score { font-weight:800; color:#166534; }
+.alert { padding:12px 14px; border-radius:9px; margin:14px 0; }.alert-error { background:#fee2e2; color:#991b1b; }
+.timeline { border-left:2px solid #d1d5db; margin-left:10px; padding-left:22px; }.timeline li { padding:0 0 20px 5px; }
+@media(max-width:640px){.form-grid{grid-template-columns:1fr}.full-width{grid-column:auto}.form-card{padding:18px}.booking-card-top{flex-direction:column}}
