@@ -1,0 +1,30 @@
+{
+  "name": "fixnear-backend",
+  "version": "1.0.0",
+  "description": "FixNear local service provider finder backend",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "check:syntax": "node scripts/check-syntax.js",
+    "create:admin": "node scripts/create-admin.js"
+  },
+  "keywords": [
+    "fixnear",
+    "express",
+    "mysql"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.14.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

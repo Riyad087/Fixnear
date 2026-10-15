@@ -1,0 +1,10 @@
+const express = require("express");
+const { requireAuth } = require("../middleware/authMiddleware");
+const { requireRole } = require("../middleware/roleMiddleware");
+const { createReview, providerReviews, myReviews } = require("../controllers/reviewController");
+const router = express.Router();
+router.get("/provider/:providerId", providerReviews);
+router.use(requireAuth);
+router.post("/", requireRole("customer"), createReview);
+router.get("/my", requireRole("customer"), myReviews);
+module.exports = router;

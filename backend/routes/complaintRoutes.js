@@ -1,0 +1,10 @@
+const express = require("express");
+const { requireAuth } = require("../middleware/authMiddleware");
+const { requireRole } = require("../middleware/roleMiddleware");
+const { createComplaint, myComplaints, complaintDetails } = require("../controllers/complaintController");
+const router = express.Router();
+router.use(requireAuth);
+router.post("/", requireRole("customer"), createComplaint);
+router.get("/my", myComplaints);
+router.get("/:id", complaintDetails);
+module.exports = router;
